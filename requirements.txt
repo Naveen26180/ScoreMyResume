@@ -1,0 +1,23 @@
+# Core dependencies
+streamlit==1.29.0
+groq==0.4.1
+
+# Semantic similarity (deterministic ATS engine)
+sentence-transformers==2.7.0
+
+# Document parsing
+pdfplumber==0.10.3
+python-docx==1.1.0
+
+# Data processing
+pandas==2.1.4
+numpy<2.0
+
+# Visualization
+plotly==5.18.0
+
+# Date/time parsing
+python-dateutil==2.8.2
+
+# Pin httpx to avoid groq 0.4.1 incompatibility (proxies arg removed in httpx 0.28+)
+httpx==0.27.2

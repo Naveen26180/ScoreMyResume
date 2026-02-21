@@ -1,0 +1,54 @@
+# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# ── Virtual environments ─────────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# ── Environment & secrets ────────────────────────────────────
+.env
+*.env
+.env.*
+secrets.toml
+
+# ── Streamlit ────────────────────────────────────────────────
+.streamlit/secrets.toml
+
+# ── Temp / editor files ──────────────────────────────────────
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── IDE ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.iml
+
+# ── Logs ─────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Test artefacts ───────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── Model cache (sentence-transformers downloads) ────────────
+models/
+.cache/
