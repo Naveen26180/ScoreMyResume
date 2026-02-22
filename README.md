@@ -172,83 +172,9 @@ The application will open in your browser at `http://localhost:8501`
 - **Mid**: Max 60 if must-have < 50%
 - **Python Evidence**: Reduces must-have score if weight < 0.5
 
----
 
-## 🧪 Testing
 
-### Test the Application
 
-1. **Prepare test data:**
-   - Sample resume (PDF or DOCX)
-   - Sample job description
-
-2. **Run through workflow:**
-   - Upload resume → Verify parsing
-   - Upload JD → Verify extraction
-   - Run analysis → Check score and breakdown
-   - Test skill evidence → Verify Python scoring
-   - Try optimizer → Rewrite a bullet
-
-3. **Check visualizations:**
-   - Score gauge displays correctly
-   - Skill charts show data
-   - Breakdown chart renders
-   - All tabs load properly
-
----
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**Issue: "Groq API key required"**
-- Solution: Enter your API key in the sidebar
-
-**Issue: "Failed to parse PDF"**
-- Solution: Ensure PDF is text-based (not scanned image)
-- Try converting to DOCX
-
-**Issue: "Module not found"**
-- Solution: Ensure all files are in correct directories
-- Check __init__.py files exist
-- Verify imports in streamlit_app.py match your structure
-
-**Issue: Charts not rendering**
-- Solution: Check Plotly is installed: `pip install plotly`
-- Clear Streamlit cache: Delete `.streamlit/` folder
-
----
-
-## 🔧 Customization
-
-### Change Color Scheme
-
-Edit the CSS in `streamlit_app.py` (line ~40):
-
-```python
-background: linear-gradient(120deg, #YOUR_COLOR1 0%, #YOUR_COLOR2 100%);
-```
-
-### Add More Skills
-
-Edit `skill_evidence.py` to add more skills beyond Python:
-
-```python
-def extract_javascript_evidence(extracted_resume):
-    # Same logic, different keywords
-    pass
-```
-
-### Adjust Scoring Weights
-
-Modify weights in `skill_evidence.py`:
-
-```python
-# Current: 20, 30, 25, 15, 10
-# Change to your preference
-```
-
----
 
 ## 📈 Performance
 
@@ -260,39 +186,6 @@ Modify weights in `skill_evidence.py`:
 
 ---
 
-## 🚀 Deployment
-
-### Deploy to Streamlit Cloud
-
-1. Push code to GitHub
-2. Go to [share.streamlit.io](https://share.streamlit.io)
-3. Connect your repository
-4. Set main file: `streamlit_app.py`
-5. Add secrets (if needed) in Streamlit Cloud settings
-
-### Deploy to Heroku
-
-1. Add `Procfile`:
-```
-web: streamlit run streamlit_app.py --server.port=$PORT
-```
-
-2. Add `setup.sh`:
-```bash
-mkdir -p ~/.streamlit/
-echo "[server]
-headless = true
-port = $PORT
-enableCORS = false
-" > ~/.streamlit/config.toml
-```
-
-3. Deploy:
-```bash
-git push heroku main
-```
-
----
 
 ## 📝 License
 
