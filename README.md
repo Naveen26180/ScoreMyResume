@@ -20,18 +20,51 @@ This project allows users to:
 - Evaluate depth of Python skill evidence
 - Visualize career timeline and skill distribution
 
-The goal of this project is to build a structured, explainable ATS scoring engine rather than a simple keyword matcher.
+The goal is to build a structured, explainable ATS scoring engine rather than a simple keyword matcher.
+
+---
+
+## Screenshots
+
+### ATS Dashboard
+![Dashboard](assets/dashboard.png)
+
+### Score Report
+![Score Report](assets/Score_report.png)
+
+### Improvement Plan
+![Improvement](assets/Improvement.png)
+
+### AI Tools
+![AI Tools](assets/AI_tools.png)
+
+### Analytics Graph
+![Graph](assets/Graph.png)
+
+---
+
+## Why This Project?
+
+Most ATS score checkers online are black boxes — you upload your resume, get a number, and have no idea why you scored that way.
+
+ScoreMyResume takes a different approach:
+
+- **Transparent Scoring** — Every point is broken down: skill match percentage, keyword presence, experience alignment, and formatting. You see exactly where you lost marks.
+- **AI + Deterministic Hybrid** — Instead of relying solely on an LLM (which can hallucinate scores), the app uses a deterministic Python engine for skill evidence scoring and only uses Groq's LLM for nuanced reasoning.
+- **Actionable Feedback** — Beyond the score, you get rewritten bullet points, missing keyword suggestions, and a prioritized improvement roadmap.
+- **Free and Open Source** — No paywalls or premium tiers. Bring your own Groq API key (free tier available) and run it locally or deploy it.
+- **Built from Experience** — This project came out of personal frustration with opaque ATS systems during the job search. If you've ever wondered "Why did I get rejected before a human even saw my resume?" — this tool gives you that answer.
 
 ---
 
 ## Tech Stack
 
-- Python  
-- Streamlit  
-- Groq LLM API  
-- Plotly  
-- PDF/DOCX parsing libraries  
-- Custom deterministic scoring modules  
+- Python
+- Streamlit
+- Groq LLM API
+- Plotly
+- PDF/DOCX parsing libraries
+- Custom deterministic scoring modules
 
 ---
 
@@ -61,7 +94,7 @@ scoremyresume/
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/scoremyresume.git
+git clone https://github.com/Naveen26180/ScoreMyResume.git
 cd scoremyresume
 ```
 
@@ -133,13 +166,13 @@ Points are awarded based on evidence:
 
 ### 5. Role Tier Logic
 
-Junior (≤1 year):
+Junior (1 year or less):
 - Projects and internships fully counted
 
 Mid (2–4 years):
 - Projects and internships weighted at 50%
 
-Senior (≥5 years):
+Senior (5+ years):
 - Only professional experience considered
 
 Score caps are applied when must-have skills or experience alignment is weak.
@@ -172,10 +205,10 @@ Score caps are applied when must-have skills or experience alignment is weak.
 
 ## Performance
 
-- Resume parsing: ~2–3 seconds  
-- JD extraction: ~2–3 seconds  
-- ATS analysis: ~3–5 seconds  
-- Total workflow: ~10–15 seconds  
+- Resume parsing: ~2–3 seconds
+- JD extraction: ~2–3 seconds
+- ATS analysis: ~3–5 seconds
+- Total workflow: ~10–15 seconds
 
 ---
 
@@ -183,16 +216,10 @@ Score caps are applied when must-have skills or experience alignment is weak.
 
 The app can be deployed using:
 
-- Streamlit Cloud  
-- Docker  
-- Heroku  
-- Local server  
-
----
-
-## License
-
-This project is intended for educational and portfolio use.
+- Streamlit Cloud
+- Docker
+- Heroku
+- Local server
 
 ---
 
@@ -204,3 +231,6 @@ This project is intended for educational and portfolio use.
 
 ---
 
+## License
+
+This project is intended for educational and portfolio use.
