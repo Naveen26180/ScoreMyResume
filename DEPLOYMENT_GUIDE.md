@@ -4,7 +4,7 @@
 ## Local
 streamlit run streamlit_app.py
 
-Access: http://localhost:8501
+Access: https://scoremyresumebot.streamlit.app/
 
 ## Streamlit Cloud
 1. Push to GitHub
