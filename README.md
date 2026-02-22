@@ -97,7 +97,7 @@ streamlit run streamlit_app.py
 
 The app will be available at:
 
-http://localhost:8501
+https://scoremyresumebot.streamlit.app/
 
 ---
 
